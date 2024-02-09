@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dog"></div>
+    <button id="generate">Generate Dog Image</button>
+
+    <script>
+        const container = document.getElementById("dog");
+        const button = document.getElementById("generate");
+
+        button.addEventListener("click", function() {
+            fetch("https://random.dog/woof.json")
+                .then(response => response.json())
+                .then(data => {
+                    container.innerHTML = '';
+
+                    const dogImage = document.createElement("img");
+                    dogImage.src = data.url;
+                    dogImage.alt = "Random Dog";
+                    container.appendChild(dogImage);
+                })
+                .catch(err => console.log(err));
+        });
+    </script>
+</body>
+</html>
+

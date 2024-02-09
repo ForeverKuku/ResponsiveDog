@@ -1,0 +1,27 @@
+#generate{
+    padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: hsl(355, 100%, 50%);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            margin-left: 600px;
+    
+}
+
+#generate:hover {
+    background-color:brown;
+}
+
+
+#dog img {
+    width: 100%;
+    width: 500px;
+    height: 500px;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 600px;
+}
